@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { createContext, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
@@ -6,9 +6,10 @@ import './App.css'
 import Button from './components/Button/Button'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
+
     <>
       <section id="center">
         <div className="hero">
@@ -126,5 +127,15 @@ function App() {
     </>
   )
 }
+export  const CurrencyContext = createContext()
+function CurrencyProvider () {
+ 
+  const [currency, setCurrency] = useState('$ CLP')
+  return (
+    <CurrencyContext.Provider value={{currency, setCurrency}}>
+      <App/> 
+    </CurrencyContext.Provider>
+  )
+}
 
-export default App
+export default CurrencyProvider
