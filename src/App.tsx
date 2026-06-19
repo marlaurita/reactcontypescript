@@ -4,6 +4,7 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
 import Button from './components/Button/Button'
+import ProductList from './components/ProductList/ProductList'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -121,6 +122,8 @@ function App() {
           </ul>
         </div>
       </section>
+
+      <ProductList></ProductList>
 
       <div className="ticks"></div>
       <section id="spacer"></section>
