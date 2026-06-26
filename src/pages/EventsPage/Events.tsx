@@ -21,7 +21,7 @@ function Events() {
     return (
         <>
             <section className="events-section">
-                <h2>onKeyDown</h2>
+                <h2>onKeyDown </h2>
                 <input className="ev-input" type="text" placeholder="Presionar cualquier tecla..."
                     onKeyDown={(e) => setLastKey(e.key)} />
                 {lastKey && (<p> Ultima tecla: <kbd>{lastKey}</kbd></p>)}
