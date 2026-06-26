@@ -30,6 +30,7 @@ function Home () {
         </Button>
 
         <Link to="/products"> Ir a Lista de productos</Link>
+        <Link to="/events"> Ir a eventos e inputs</Link>
       
         <Button 
           titulo="Boton secundario" 
