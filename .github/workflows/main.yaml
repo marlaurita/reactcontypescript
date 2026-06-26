@@ -1,0 +1,16 @@
+name: Mi primer flujo de trabajo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  construir:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hacer checkout del código
+        uses: actions/checkout@v4
+
+      - name: Ejecutar un script de ejemplo
+        run: echo "¡Hola, mundo!"
